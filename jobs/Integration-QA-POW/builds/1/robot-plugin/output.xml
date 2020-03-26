@@ -1,0 +1,547 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.1 (Python 3.7.0 on win32)" generated="20190731 23:45:27.417" rpa="false">
+<suite id="s1" name="Order1" source="C:\Users\ibarona\Documents\robot-demo\demo\Tests\Order1.robot">
+<test id="s1-t1" name="Test-Case-01">
+<kw name="Register Keyword To Run On Failure" library="Selenium2Library">
+<doc>Sets the keyword to execute when a Selenium2Library keyword fails.</doc>
+<arguments>
+<arg>Agent Selection Failed</arg>
+</arguments>
+<msg timestamp="20190731 23:45:27.933" level="INFO">Agent Selection Failed will be run on failure.</msg>
+<status status="PASS" starttime="20190731 23:45:27.933" endtime="20190731 23:45:27.933"></status>
+</kw>
+<kw name="Login POW Website Successfully" library="Order_Creation_Successfully">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${CONFIG.COLOMBIA.LOGIN_URL}</arg>
+<arg>gc</arg>
+</arguments>
+<msg timestamp="20190731 23:45:27.934" level="INFO">Opening browser 'gc' to base url 'https://hsapuat-hughessa.cs9.force.com/copartner/login'.</msg>
+<status status="PASS" starttime="20190731 23:45:27.934" endtime="20190731 23:45:33.400"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${${TEST NAME}}</arg>
+<arg>Username</arg>
+</arguments>
+<assign>
+<var>${username}</var>
+</assign>
+<msg timestamp="20190731 23:45:33.402" level="INFO">${username} = callcenter@alltic.co</msg>
+<status status="PASS" starttime="20190731 23:45:33.401" endtime="20190731 23:45:33.402"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:username</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20190731 23:45:33.403" level="INFO">Typing text 'callcenter@alltic.co' into text field 'id:username'.</msg>
+<status status="PASS" starttime="20190731 23:45:33.403" endtime="20190731 23:45:33.642"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${${TEST NAME}}</arg>
+<arg>Password</arg>
+</arguments>
+<assign>
+<var>${passwd}</var>
+</assign>
+<msg timestamp="20190731 23:45:33.643" level="INFO">${passwd} = CallAlltic123</msg>
+<status status="PASS" starttime="20190731 23:45:33.642" endtime="20190731 23:45:33.643"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:password</arg>
+<arg>${passwd}</arg>
+</arguments>
+<msg timestamp="20190731 23:45:33.643" level="INFO">Typing text 'CallAlltic123' into text field 'id:password'.</msg>
+<status status="PASS" starttime="20190731 23:45:33.643" endtime="20190731 23:45:33.815"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>id:Login</arg>
+</arguments>
+<msg timestamp="20190731 23:45:33.815" level="INFO">Clicking element 'id:Login'.</msg>
+<status status="PASS" starttime="20190731 23:45:33.815" endtime="20190731 23:45:37.064"></status>
+</kw>
+<status status="PASS" starttime="20190731 23:45:27.934" endtime="20190731 23:45:37.065"></status>
+</kw>
+<kw name="Start Order Creation" library="Order_Creation_Successfully">
+<kw name="Wait Overlay" library="Keywords">
+<kw name="Wait Until Page Does Not Contain Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` disappears from current page.</doc>
+<arguments>
+<arg>class:overlay</arg>
+<arg>60</arg>
+</arguments>
+<status status="PASS" starttime="20190731 23:45:37.066" endtime="20190731 23:45:37.090"></status>
+</kw>
+<status status="PASS" starttime="20190731 23:45:37.066" endtime="20190731 23:45:37.090"></status>
+</kw>
+<kw name="Wait For Element" library="Keywords">
+<arguments>
+<arg>class</arg>
+<arg>toggle-button</arg>
+<arg>1</arg>
+<arg>60</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>(//*[contains(@${attribute}, "${name}")])[${number}]</arg>
+<arg>${time}</arg>
+</arguments>
+<status status="PASS" starttime="20190731 23:45:37.091" endtime="20190731 23:45:37.113"></status>
+</kw>
+<status status="PASS" starttime="20190731 23:45:37.090" endtime="20190731 23:45:37.113"></status>
+</kw>
+<kw name="Get Element" library="Keywords">
+<arguments>
+<arg>class</arg>
+<arg>toggle-button</arg>
+<arg>1</arg>
+</arguments>
+<assign>
+<var>${menu1}</var>
+</assign>
+<kw name="Get WebElement" library="Selenium2Library">
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<arguments>
+<arg>(//descendant::*[contains(@${attribute}, "${name}")])[${number}]</arg>
+</arguments>
+<assign>
+<var>${element}</var>
+</assign>
+<msg timestamp="20190731 23:45:37.132" level="INFO">${element} = &lt;selenium.webdriver.remote.webelement.WebElement (session="325b8cc0812bb40ce8b520e8dcd28176", element="fc61d419-694b-43a6-8408-bb6609bf68b6")&gt;</msg>
+<status status="PASS" starttime="20190731 23:45:37.114" endtime="20190731 23:45:37.133"></status>
+</kw>
+<msg timestamp="20190731 23:45:37.133" level="INFO">${menu1} = &lt;selenium.webdriver.remote.webelement.WebElement (session="325b8cc0812bb40ce8b520e8dcd28176", element="fc61d419-694b-43a6-8408-bb6609bf68b6")&gt;</msg>
+<status status="PASS" starttime="20190731 23:45:37.114" endtime="20190731 23:45:37.133"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${menu1}</arg>
+</arguments>
+<msg timestamp="20190731 23:45:37.134" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="325b8cc0812bb40ce8b520e8dcd28176", element="fc61d419-694b-43a6-8408-bb6609bf68b6")&gt;'.</msg>
+<status status="PASS" starttime="20190731 23:45:37.133" endtime="20190731 23:45:37.200"></status>
+</kw>
+<kw name="Get Element" library="Keywords">
+<arguments>
+<arg>id</arg>
+<arg>dropdownMenu1</arg>
+<arg>2</arg>
+</arguments>
+<assign>
+<var>${menu2}</var>
+</assign>
+<kw name="Get WebElement" library="Selenium2Library">
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<arguments>
+<arg>(//descendant::*[contains(@${attribute}, "${name}")])[${number}]</arg>
+</arguments>
+<assign>
+<var>${element}</var>
+</assign>
+<msg timestamp="20190731 23:45:37.231" level="INFO">${element} = &lt;selenium.webdriver.remote.webelement.WebElement (session="325b8cc0812bb40ce8b520e8dcd28176", element="47f6545f-a4be-4f72-81b2-8c4453a3faca")&gt;</msg>
+<status status="PASS" starttime="20190731 23:45:37.201" endtime="20190731 23:45:37.231"></status>
+</kw>
+<msg timestamp="20190731 23:45:37.231" level="INFO">${menu2} = &lt;selenium.webdriver.remote.webelement.WebElement (session="325b8cc0812bb40ce8b520e8dcd28176", element="47f6545f-a4be-4f72-81b2-8c4453a3faca")&gt;</msg>
+<status status="PASS" starttime="20190731 23:45:37.200" endtime="20190731 23:45:37.231"></status>
+</kw>
+<kw name="Wait Element Enable and Visible" library="Keywords">
+<arguments>
+<arg>id</arg>
+<arg>dropdownMenu1</arg>
+<arg>2</arg>
+<arg>60</arg>
+</arguments>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until element ``locator`` is enabled.</doc>
+<arguments>
+<arg>(//*[contains(@${attribute}, "${name}")])[${number}]</arg>
+<arg>${time}</arg>
+</arguments>
+<status status="PASS" starttime="20190731 23:45:37.232" endtime="20190731 23:45:37.280"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>(//*[contains(@${attribute}, "${name}")])[${number}]</arg>
+<arg>${time}</arg>
+</arguments>
+<status status="PASS" starttime="20190731 23:45:37.280" endtime="20190731 23:45:37.314"></status>
+</kw>
+<status status="PASS" starttime="20190731 23:45:37.232" endtime="20190731 23:45:37.314"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>${menu2}</arg>
+</arguments>
+<msg timestamp="20190731 23:45:37.315" level="INFO">Clicking button '&lt;selenium.webdriver.remote.webelement.WebElement (session="325b8cc0812bb40ce8b520e8dcd28176", element="47f6545f-a4be-4f72-81b2-8c4453a3faca")&gt;'.</msg>
+<status status="PASS" starttime="20190731 23:45:37.314" endtime="20190731 23:45:37.383"></status>
+</kw>
+<kw name="Wait Element Enable and Visible" library="Keywords">
+<arguments>
+<arg>href</arg>
+<arg>${CONFIG.COLOMBIA.NEW_ORDER_URL}</arg>
+<arg>1</arg>
+<arg>60</arg>
+</arguments>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until element ``locator`` is enabled.</doc>
+<arguments>
+<arg>(//*[contains(@${attribute}, "${name}")])[${number}]</arg>
+<arg>${time}</arg>
+</arguments>
+<status status="PASS" starttime="20190731 23:45:37.384" endtime="20190731 23:45:37.443"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>(//*[contains(@${attribute}, "${name}")])[${number}]</arg>
+<arg>${time}</arg>
+</arguments>
+<status status="PASS" starttime="20190731 23:45:37.443" endtime="20190731 23:45:37.483"></status>
+</kw>
+<status status="PASS" starttime="20190731 23:45:37.383" endtime="20190731 23:45:37.483"></status>
+</kw>
+<kw name="Get Element" library="Keywords">
+<arguments>
+<arg>href</arg>
+<arg>${CONFIG.COLOMBIA.NEW_ORDER_URL}</arg>
+<arg>1</arg>
+</arguments>
+<assign>
+<var>${link}</var>
+</assign>
+<kw name="Get WebElement" library="Selenium2Library">
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<arguments>
+<arg>(//descendant::*[contains(@${attribute}, "${name}")])[${number}]</arg>
+</arguments>
+<assign>
+<var>${element}</var>
+</assign>
+<msg timestamp="20190731 23:45:37.513" level="INFO">${element} = &lt;selenium.webdriver.remote.webelement.WebElement (session="325b8cc0812bb40ce8b520e8dcd28176", element="7175b344-dc70-421f-8897-eb96c703a1be")&gt;</msg>
+<status status="PASS" starttime="20190731 23:45:37.485" endtime="20190731 23:45:37.513"></status>
+</kw>
+<msg timestamp="20190731 23:45:37.513" level="INFO">${link} = &lt;selenium.webdriver.remote.webelement.WebElement (session="325b8cc0812bb40ce8b520e8dcd28176", element="7175b344-dc70-421f-8897-eb96c703a1be")&gt;</msg>
+<status status="PASS" starttime="20190731 23:45:37.484" endtime="20190731 23:45:37.513"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>${link}</arg>
+</arguments>
+<msg timestamp="20190731 23:45:37.514" level="INFO">Clicking link '&lt;selenium.webdriver.remote.webelement.WebElement (session="325b8cc0812bb40ce8b520e8dcd28176", element="7175b344-dc70-421f-8897-eb96c703a1be")&gt;'.</msg>
+<status status="PASS" starttime="20190731 23:45:37.514" endtime="20190731 23:45:40.793"></status>
+</kw>
+<status status="PASS" starttime="20190731 23:45:37.065" endtime="20190731 23:45:40.793"></status>
+</kw>
+<kw name="Validate Step 1 Cuestionario Without Agent" library="Failures_Ordering">
+<kw name="Wait Overlay" library="Keywords">
+<kw name="Wait Until Page Does Not Contain Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` disappears from current page.</doc>
+<arguments>
+<arg>class:overlay</arg>
+<arg>60</arg>
+</arguments>
+<status status="PASS" starttime="20190731 23:45:40.803" endtime="20190731 23:45:40.834"></status>
+</kw>
+<status status="PASS" starttime="20190731 23:45:40.802" endtime="20190731 23:45:40.834"></status>
+</kw>
+<kw name="Get Name" library="Keywords">
+<arguments>
+<arg>value</arg>
+<arg>Residential</arg>
+<arg>1</arg>
+</arguments>
+<assign>
+<var>${service}</var>
+</assign>
+<kw name="Get Element Attribute" library="Selenium2Library">
+<doc>Returns value of ``attribute`` from element ``locator``.</doc>
+<arguments>
+<arg>//*[contains(@${attribute}, "${name}")][${number}]</arg>
+<arg>name</arg>
+</arguments>
+<assign>
+<var>${value}</var>
+</assign>
+<msg timestamp="20190731 23:45:41.056" level="INFO">${value} = OrdmanagementPge:j_id219:j_id220:j_id230:CustomerType</msg>
+<status status="PASS" starttime="20190731 23:45:40.835" endtime="20190731 23:45:41.056"></status>
+</kw>
+<msg timestamp="20190731 23:45:41.057" level="INFO">${service} = OrdmanagementPge:j_id219:j_id220:j_id230:CustomerType</msg>
+<status status="PASS" starttime="20190731 23:45:40.835" endtime="20190731 23:45:41.057"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${${TEST NAME}}</arg>
+<arg>Order Type</arg>
+</arguments>
+<assign>
+<var>${order_type}</var>
+</assign>
+<msg timestamp="20190731 23:45:41.057" level="INFO">${order_type} = Residential</msg>
+<status status="PASS" starttime="20190731 23:45:41.057" endtime="20190731 23:45:41.057"></status>
+</kw>
+<kw name="Select Radio Button" library="Selenium2Library">
+<doc>Sets radio button group ``group_name`` to ``value``.</doc>
+<arguments>
+<arg>${service}</arg>
+<arg>${order_type}</arg>
+</arguments>
+<msg timestamp="20190731 23:45:41.058" level="INFO">Selecting 'Residential' from radio button 'OrdmanagementPge:j_id219:j_id220:j_id230:CustomerType'.</msg>
+<status status="PASS" starttime="20190731 23:45:41.058" endtime="20190731 23:45:41.207"></status>
+</kw>
+<kw name="Get Element" library="Keywords">
+<arguments>
+<arg>name</arg>
+<arg>Authcheckbox</arg>
+<arg>1</arg>
+</arguments>
+<assign>
+<var>${Auth1}</var>
+</assign>
+<kw name="Get WebElement" library="Selenium2Library">
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<arguments>
+<arg>(//descendant::*[contains(@${attribute}, "${name}")])[${number}]</arg>
+</arguments>
+<assign>
+<var>${element}</var>
+</assign>
+<msg timestamp="20190731 23:45:41.239" level="INFO">${element} = &lt;selenium.webdriver.remote.webelement.WebElement (session="325b8cc0812bb40ce8b520e8dcd28176", element="449c9e61-136f-4b7d-93ed-ccdfdb2f2ea1")&gt;</msg>
+<status status="PASS" starttime="20190731 23:45:41.209" endtime="20190731 23:45:41.239"></status>
+</kw>
+<msg timestamp="20190731 23:45:41.239" level="INFO">${Auth1} = &lt;selenium.webdriver.remote.webelement.WebElement (session="325b8cc0812bb40ce8b520e8dcd28176", element="449c9e61-136f-4b7d-93ed-ccdfdb2f2ea1")&gt;</msg>
+<status status="PASS" starttime="20190731 23:45:41.208" endtime="20190731 23:45:41.239"></status>
+</kw>
+<kw name="Select Checkbox" library="Selenium2Library">
+<doc>Selects checkbox identified by ``locator``.</doc>
+<arguments>
+<arg>${Auth1}</arg>
+</arguments>
+<msg timestamp="20190731 23:45:41.240" level="INFO">Selecting checkbox '&lt;selenium.webdriver.remote.webelement.WebElement (session="325b8cc0812bb40ce8b520e8dcd28176", element="449c9e61-136f-4b7d-93ed-ccdfdb2f2ea1")&gt;'.</msg>
+<status status="PASS" starttime="20190731 23:45:41.240" endtime="20190731 23:45:41.350"></status>
+</kw>
+<kw name="Get Element" library="Keywords">
+<arguments>
+<arg>name</arg>
+<arg>Authcheckbox</arg>
+<arg>2</arg>
+</arguments>
+<assign>
+<var>${Auth2}</var>
+</assign>
+<kw name="Get WebElement" library="Selenium2Library">
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<arguments>
+<arg>(//descendant::*[contains(@${attribute}, "${name}")])[${number}]</arg>
+</arguments>
+<assign>
+<var>${element}</var>
+</assign>
+<msg timestamp="20190731 23:45:41.397" level="INFO">${element} = &lt;selenium.webdriver.remote.webelement.WebElement (session="325b8cc0812bb40ce8b520e8dcd28176", element="6d6ef7fc-29f7-424c-b923-31a220230de6")&gt;</msg>
+<status status="PASS" starttime="20190731 23:45:41.352" endtime="20190731 23:45:41.397"></status>
+</kw>
+<msg timestamp="20190731 23:45:41.397" level="INFO">${Auth2} = &lt;selenium.webdriver.remote.webelement.WebElement (session="325b8cc0812bb40ce8b520e8dcd28176", element="6d6ef7fc-29f7-424c-b923-31a220230de6")&gt;</msg>
+<status status="PASS" starttime="20190731 23:45:41.351" endtime="20190731 23:45:41.397"></status>
+</kw>
+<kw name="Select Checkbox" library="Selenium2Library">
+<doc>Selects checkbox identified by ``locator``.</doc>
+<arguments>
+<arg>${Auth2}</arg>
+</arguments>
+<msg timestamp="20190731 23:45:41.398" level="INFO">Selecting checkbox '&lt;selenium.webdriver.remote.webelement.WebElement (session="325b8cc0812bb40ce8b520e8dcd28176", element="6d6ef7fc-29f7-424c-b923-31a220230de6")&gt;'.</msg>
+<status status="PASS" starttime="20190731 23:45:41.398" endtime="20190731 23:45:41.546"></status>
+</kw>
+<kw name="Get Element" library="Keywords">
+<arguments>
+<arg>value</arg>
+<arg>Continuar</arg>
+<arg>1</arg>
+</arguments>
+<assign>
+<var>${button}</var>
+</assign>
+<kw name="Get WebElement" library="Selenium2Library">
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<arguments>
+<arg>(//descendant::*[contains(@${attribute}, "${name}")])[${number}]</arg>
+</arguments>
+<assign>
+<var>${element}</var>
+</assign>
+<msg timestamp="20190731 23:45:41.596" level="INFO">${element} = &lt;selenium.webdriver.remote.webelement.WebElement (session="325b8cc0812bb40ce8b520e8dcd28176", element="c566a49b-4416-49f2-ba1e-27c33b71b309")&gt;</msg>
+<status status="PASS" starttime="20190731 23:45:41.547" endtime="20190731 23:45:41.596"></status>
+</kw>
+<msg timestamp="20190731 23:45:41.596" level="INFO">${button} = &lt;selenium.webdriver.remote.webelement.WebElement (session="325b8cc0812bb40ce8b520e8dcd28176", element="c566a49b-4416-49f2-ba1e-27c33b71b309")&gt;</msg>
+<status status="PASS" starttime="20190731 23:45:41.546" endtime="20190731 23:45:41.597"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>${button}</arg>
+</arguments>
+<msg timestamp="20190731 23:45:41.597" level="INFO">Clicking button '&lt;selenium.webdriver.remote.webelement.WebElement (session="325b8cc0812bb40ce8b520e8dcd28176", element="c566a49b-4416-49f2-ba1e-27c33b71b309")&gt;'.</msg>
+<status status="PASS" starttime="20190731 23:45:41.597" endtime="20190731 23:45:41.743"></status>
+</kw>
+<kw name="Wait Overlay" library="Keywords">
+<kw name="Wait Until Page Does Not Contain Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` disappears from current page.</doc>
+<arguments>
+<arg>class:overlay</arg>
+<arg>60</arg>
+</arguments>
+<status status="PASS" starttime="20190731 23:45:41.744" endtime="20190731 23:45:44.857"></status>
+</kw>
+<status status="PASS" starttime="20190731 23:45:41.743" endtime="20190731 23:45:44.857"></status>
+</kw>
+<kw name="Wait Element Enable and Visible" library="Keywords">
+<arguments>
+<arg>id</arg>
+<arg>ErrorOutputText</arg>
+<arg>1</arg>
+<arg>60</arg>
+</arguments>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until element ``locator`` is enabled.</doc>
+<arguments>
+<arg>(//*[contains(@${attribute}, "${name}")])[${number}]</arg>
+<arg>${time}</arg>
+</arguments>
+<status status="PASS" starttime="20190731 23:45:44.858" endtime="20190731 23:45:44.904"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>(//*[contains(@${attribute}, "${name}")])[${number}]</arg>
+<arg>${time}</arg>
+</arguments>
+<status status="PASS" starttime="20190731 23:45:44.904" endtime="20190731 23:45:44.933"></status>
+</kw>
+<status status="PASS" starttime="20190731 23:45:44.858" endtime="20190731 23:45:44.933"></status>
+</kw>
+<kw name="Get Element" library="Keywords">
+<arguments>
+<arg>id</arg>
+<arg>ErrorOutputText</arg>
+<arg>1</arg>
+</arguments>
+<assign>
+<var>${error_elem}</var>
+</assign>
+<kw name="Get WebElement" library="Selenium2Library">
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<arguments>
+<arg>(//descendant::*[contains(@${attribute}, "${name}")])[${number}]</arg>
+</arguments>
+<assign>
+<var>${element}</var>
+</assign>
+<msg timestamp="20190731 23:45:44.953" level="INFO">${element} = &lt;selenium.webdriver.remote.webelement.WebElement (session="325b8cc0812bb40ce8b520e8dcd28176", element="c87c26d2-dc40-45f8-b859-f554e159102b")&gt;</msg>
+<status status="PASS" starttime="20190731 23:45:44.934" endtime="20190731 23:45:44.953"></status>
+</kw>
+<msg timestamp="20190731 23:45:44.953" level="INFO">${error_elem} = &lt;selenium.webdriver.remote.webelement.WebElement (session="325b8cc0812bb40ce8b520e8dcd28176", element="c87c26d2-dc40-45f8-b859-f554e159102b")&gt;</msg>
+<status status="PASS" starttime="20190731 23:45:44.933" endtime="20190731 23:45:44.953"></status>
+</kw>
+<kw name="Get Element Attribute" library="Selenium2Library">
+<doc>Returns value of ``attribute`` from element ``locator``.</doc>
+<arguments>
+<arg>${error_elem}</arg>
+<arg>id</arg>
+</arguments>
+<assign>
+<var>${error_elem_id}</var>
+</assign>
+<msg timestamp="20190731 23:45:44.962" level="INFO">${error_elem_id} = OrdmanagementPge:ErrorOutputText</msg>
+<status status="PASS" starttime="20190731 23:45:44.953" endtime="20190731 23:45:44.962"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${${TEST NAME}}</arg>
+<arg>Expected Text</arg>
+</arguments>
+<assign>
+<var>${expected_text}</var>
+</assign>
+<msg timestamp="20190731 23:45:44.964" level="INFO">${expected_text} = Por favor complete todos los campos antes de hacer clic en</msg>
+<status status="PASS" starttime="20190731 23:45:44.963" endtime="20190731 23:45:44.964"></status>
+</kw>
+<kw name="Element Text Should Be" library="Selenium2Library">
+<doc>Verifies that element ``locator`` contains exact text ``expected``.</doc>
+<arguments>
+<arg>${error_elem_id}</arg>
+<arg>${expected_text}</arg>
+</arguments>
+<msg timestamp="20190731 23:45:44.964" level="INFO">Verifying element 'OrdmanagementPge:ErrorOutputText' contains exact text 'Por favor complete todos los campos antes de hacer clic en'.</msg>
+<kw name="Agent Selection Failed" library="Failures_Ordering">
+<kw name="JunitXML Add Error Msg" library="JunitXMLCustomizer">
+<arguments>
+<arg>${TEST NAME}</arg>
+<arg>Mensaje incorrecto</arg>
+</arguments>
+<status status="PASS" starttime="20190731 23:45:44.999" endtime="20190731 23:45:45.007"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20190731 23:45:45.007" endtime="20190731 23:45:47.294"></status>
+</kw>
+<status status="PASS" starttime="20190731 23:45:44.999" endtime="20190731 23:45:47.294"></status>
+</kw>
+<msg timestamp="20190731 23:45:47.306" level="FAIL">The text of element 'OrdmanagementPge:ErrorOutputText' should have been 'Por favor complete todos los campos antes de hacer clic en' but it was 'Por favor complete todos los campos antes de hacer clic en continuar.'.</msg>
+<status status="FAIL" starttime="20190731 23:45:44.964" endtime="20190731 23:45:47.306"></status>
+</kw>
+<status status="FAIL" starttime="20190731 23:45:40.802" endtime="20190731 23:45:47.306"></status>
+</kw>
+<doc>Test Case #1</doc>
+<status status="FAIL" starttime="20190731 23:45:27.932" endtime="20190731 23:45:47.307" critical="yes">The text of element 'OrdmanagementPge:ErrorOutputText' should have been 'Por favor complete todos los campos antes de hacer clic en' but it was 'Por favor complete todos los campos antes de hacer clic en continuar.'.</status>
+</test>
+<test id="s1-t2" name="Test-Case-02">
+<kw name="Register Keyword To Run On Failure" library="Selenium2Library">
+<doc>Sets the keyword to execute when a Selenium2Library keyword fails.</doc>
+<arguments>
+<arg>Agent Selection Failed</arg>
+</arguments>
+<msg timestamp="20190731 23:45:47.312" level="INFO">Agent Selection Failed will be run on failure.</msg>
+<status status="PASS" starttime="20190731 23:45:47.311" endtime="20190731 23:45:47.312"></status>
+</kw>
+<kw name="JunitXML Add Success Msg" library="JunitXMLCustomizer">
+<arguments>
+<arg>${TEST NAME}</arg>
+<arg>Funcionó</arg>
+</arguments>
+<status status="PASS" starttime="20190731 23:45:47.312" endtime="20190731 23:45:47.314"></status>
+</kw>
+<doc>Test Case #2</doc>
+<status status="PASS" starttime="20190731 23:45:47.311" endtime="20190731 23:45:47.315" critical="yes"></status>
+</test>
+<doc>This is some basic info about the suit test</doc>
+<status status="FAIL" starttime="20190731 23:45:27.419" endtime="20190731 23:45:47.316"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1">Critical Tests</stat>
+<stat pass="1" fail="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="1" id="s1" name="Order1">Order1</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20190731 23:45:27.903" level="WARN">Imported library 'C:\Users\ibarona\Documents\robot-demo\demo\CustomLibraries\PrepateTestlinkJunitXML.py' contains no keywords.</msg>
+</errors>
+</robot>

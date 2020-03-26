@@ -1,0 +1,12 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<hudson.plugins.mantis.MantisProjectProperty_-DescriptorImpl plugin="mantis@0.26">
+  <sites>
+    <hudson.plugins.mantis.MantisSite>
+      <url>https://alltic.co/btdemo/</url>
+      <version>V120</version>
+      <userName>ibarona</userName>
+      <secretPassword>{AQAAABAAAAAQvdXM77ApkRUQDnc3aCehYYiky3Odgu2ZlZEQ4+qfpbA=}</secretPassword>
+      <secretBasicPassword>{AQAAABAAAAAQngKs5TC2VwFHtLVGblMt9FLEjhXYmyuwGC8fqVAa2Ys=}</secretBasicPassword>
+    </hudson.plugins.mantis.MantisSite>
+  </sites>
+</hudson.plugins.mantis.MantisProjectProperty_-DescriptorImpl>

@@ -1,0 +1,13 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2019-09-05 23:16:51.397 UTC</timestamp>
+  <md5sum>ea0a2e26e26e2b89111c8f836aae32ad</md5sum>
+  <fileName>Credential id=80248389-55e5-4642-a577-65d672a61ec5 name=ibarona_alltic/******</fileName>
+  <usages>
+    <entry>
+      <string>Integration-QA-POW</string>
+      <ranges>1-3</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

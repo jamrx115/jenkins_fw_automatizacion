@@ -1,0 +1,12 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<hudson.plugins.testlink.TestLinkBuilderDescriptor plugin="testlink@3.16">
+  <testLinkBuildType>hudson.plugins.testlink.TestLinkBuilder</testLinkBuildType>
+  <installations>
+    <hudson.plugins.testlink.TestLinkInstallation>
+      <name>Integration</name>
+      <url>https://alltic.co/tldemo/lib/api/xmlrpc/v1/xmlrpc.php</url>
+      <devKey>55a6cbb67b6debf876ba631e88865576</devKey>
+      <testLinkJavaAPIProperties></testLinkJavaAPIProperties>
+    </hudson.plugins.testlink.TestLinkInstallation>
+  </installations>
+</hudson.plugins.testlink.TestLinkBuilderDescriptor>

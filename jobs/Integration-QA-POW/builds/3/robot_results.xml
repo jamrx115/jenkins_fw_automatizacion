@@ -1,0 +1,60 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<result plugin="robot@2.0.0">
+  <logFile>log.html</logFile>
+  <reportFile>report.html</reportFile>
+  <timeStamp>20190731 23:45:27.417</timeStamp>
+  <suites>
+    <entry>
+      <string>Order1</string>
+      <suite>
+        <duplicateSafeName>Order1</duplicateSafeName>
+        <logFile>log.html</logFile>
+        <reportFile>report.html</reportFile>
+        <id>s1</id>
+        <children/>
+        <parent class="result" reference="../../../.."/>
+        <name>Order1</name>
+        <description>This is some basic info about the suit test</description>
+        <caseResults>
+          <entry>
+            <string>Test-Case-02</string>
+            <case>
+              <duplicateSafeName>Test-Case-02</duplicateSafeName>
+              <logFile>log.html</logFile>
+              <id>s1-t2</id>
+              <passed>true</passed>
+              <critical>true</critical>
+              <name>Test-Case-02</name>
+              <description>Test Case #2</description>
+              <starttime>20190731 23:45:47.311</starttime>
+              <endtime>20190731 23:45:47.315</endtime>
+              <tags/>
+              <parent reference="../../../.."/>
+              <failedSince>0</failedSince>
+            </case>
+          </entry>
+          <entry>
+            <string>Test-Case-01</string>
+            <case>
+              <duplicateSafeName>Test-Case-01</duplicateSafeName>
+              <logFile>log.html</logFile>
+              <id>s1-t1</id>
+              <passed>false</passed>
+              <critical>true</critical>
+              <errorMsg>The text of element &apos;OrdmanagementPge:ErrorOutputText&apos; should have been &apos;Por favor complete todos los campos antes de hacer clic en&apos; but it was &apos;Por favor complete todos los campos antes de hacer clic en continuar.&apos;.</errorMsg>
+              <name>Test-Case-01</name>
+              <description>Test Case #1</description>
+              <starttime>20190731 23:45:27.932</starttime>
+              <endtime>20190731 23:45:47.307</endtime>
+              <tags/>
+              <parent reference="../../../.."/>
+              <failedSince>0</failedSince>
+            </case>
+          </entry>
+        </caseResults>
+        <startTime>20190731 23:45:27.419</startTime>
+        <endTime>20190731 23:45:47.316</endTime>
+      </suite>
+    </entry>
+  </suites>
+</result>

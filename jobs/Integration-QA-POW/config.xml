@@ -1,0 +1,92 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <hudson.plugins.mantis.MantisProjectProperty plugin="mantis@0.26">
+      <siteName>https://alltic.co/btdemo/</siteName>
+      <projectId>-1</projectId>
+      <category>Not Selected</category>
+      <regexpPattern>
+        <pattern>(?&lt;=issue #?)(\d+)(?=)</pattern>
+        <flags>0</flags>
+      </regexpPattern>
+      <linkEnabled>false</linkEnabled>
+    </hudson.plugins.mantis.MantisProjectProperty>
+  </properties>
+  <scm class="hudson.plugins.git.GitSCM" plugin="git@3.12.0">
+    <configVersion>2</configVersion>
+    <userRemoteConfigs>
+      <hudson.plugins.git.UserRemoteConfig>
+        <url>https://ibarona_alltic@bitbucket.org/ibarona_alltic/robot-demo.git</url>
+        <credentialsId>80248389-55e5-4642-a577-65d672a61ec5</credentialsId>
+      </hudson.plugins.git.UserRemoteConfig>
+    </userRemoteConfigs>
+    <branches>
+      <hudson.plugins.git.BranchSpec>
+        <name>*/master</name>
+      </hudson.plugins.git.BranchSpec>
+    </branches>
+    <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
+    <submoduleCfg class="list"/>
+    <extensions/>
+  </scm>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.tasks.Shell>
+      <command>cd demo/Tests
+robot -x junit.xml Order1.robot
+exit 0</command>
+    </hudson.tasks.Shell>
+    <hudson.plugins.testlink.TestLinkBuilder plugin="testlink@3.16">
+      <testLinkName>Integration</testLinkName>
+      <testProjectName>HCO-UAT Platform SDS</testProjectName>
+      <testPlanName>Release QA</testPlanName>
+      <buildName>Cycle 1</buildName>
+      <platformName></platformName>
+      <customFields>robot</customFields>
+      <testPlanCustomFields></testPlanCustomFields>
+      <transactional>false</transactional>
+      <failedTestsMarkBuildAsFailure>false</failedTestsMarkBuildAsFailure>
+      <failIfNoResults>false</failIfNoResults>
+      <failOnNotRun>false</failOnNotRun>
+      <executionOrderComparator/>
+      <failure>false</failure>
+      <resultSeekers>
+        <hudson.plugins.testlink.result.JUnitCaseNameResultSeeker>
+          <includePattern>demo/Tests/junit_testlink.xml</includePattern>
+          <keyCustomField>robot</keyCustomField>
+          <includeNotes>true</includeNotes>
+          <attachJUnitXML>false</attachJUnitXML>
+        </hudson.plugins.testlink.result.JUnitCaseNameResultSeeker>
+      </resultSeekers>
+    </hudson.plugins.testlink.TestLinkBuilder>
+  </builders>
+  <publishers>
+    <hudson.plugins.mantis.MantisIssueRegister plugin="mantis@0.26">
+      <threshold>failureOrUnstable</threshold>
+      <keepTicketPrivate>false</keepTicketPrivate>
+    </hudson.plugins.mantis.MantisIssueRegister>
+    <hudson.plugins.robot.RobotPublisher plugin="robot@2.0.0">
+      <outputPath>demo/Tests/</outputPath>
+      <reportFileName>report.html</reportFileName>
+      <logFileName>log.html</logFileName>
+      <outputFileName>output.xml</outputFileName>
+      <disableArchiveOutput>false</disableArchiveOutput>
+      <passThreshold>50.0</passThreshold>
+      <unstableThreshold>50.0</unstableThreshold>
+      <otherFiles>
+        <string></string>
+      </otherFiles>
+      <enableCache>true</enableCache>
+      <onlyCritical>true</onlyCritical>
+    </hudson.plugins.robot.RobotPublisher>
+  </publishers>
+  <buildWrappers/>
+</project>

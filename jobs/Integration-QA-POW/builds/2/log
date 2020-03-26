@@ -1,0 +1,35 @@
+Started by user [8mha:////4CP0BqaZuZyAm6AraOJS9jsmBTuWfswQ+PeXejxA38beAAAAmR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzuEgZe/dLi1CL9zKTEovy8RACMdqKCwgAAAA==[0mIvan Barona
+Running as SYSTEM
+Building in workspace /var/jenkins_home/workspace/Integration-QA-POW
+using credential 80248389-55e5-4642-a577-65d672a61ec5
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://ibarona_alltic@bitbucket.org/ibarona_alltic/robot-demo.git # timeout=10
+Fetching upstream changes from https://ibarona_alltic@bitbucket.org/ibarona_alltic/robot-demo.git
+ > git --version # timeout=10
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --progress https://ibarona_alltic@bitbucket.org/ibarona_alltic/robot-demo.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision 5f9c8a439f3514e5427171cb76a6d12c2e6a330b (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 5f9c8a439f3514e5427171cb76a6d12c2e6a330b
+Commit message: "commit 20"
+ > git rev-list --no-walk 5f9c8a439f3514e5427171cb76a6d12c2e6a330b # timeout=10
+[Integration-QA-POW] $ /bin/sh -xe /tmp/jenkins435117588494314099.sh
++ cd demoTests
+/tmp/jenkins435117588494314099.sh: 2: cd: can't cd to demoTests
+Build step 'Execute shell' marked build as failure
+[MANTIS] Neither project nor category selected.
+[MANTIS] skipping file a ticket ...
+Robot results publisher started...
+-Parsing output xml:
+Done!
+-Copying log files to build dir:
+Done!
+-Assigning results to build:
+Done!
+-Checking thresholds:
+Done!
+Done publishing Robot results.
+Finished: FAILURE
